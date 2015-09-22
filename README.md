@@ -32,4 +32,6 @@
 
 ### 完全基于AutoLayout,完全自适应
 
+### 简单易用,详见Sample
+
 # ![alt tag](https://github.com/ashamp/HXNoneReuseTableView/blob/master/demo.png)
