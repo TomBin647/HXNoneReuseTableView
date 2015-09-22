@@ -15,6 +15,10 @@
 		FA5188011BB16F660029ECF8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5187FF1BB16F660029ECF8 /* LaunchScreen.xib */; };
 		FA51880D1BB16F660029ECF8 /* HXNoneReuseTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA51880C1BB16F660029ECF8 /* HXNoneReuseTableViewTests.m */; };
 		FA5188191BB16FCD0029ECF8 /* HXNoneReuseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5188181BB16FCD0029ECF8 /* HXNoneReuseTableView.m */; };
+		FA51881E1BB1730B0029ECF8 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA51881C1BB1730B0029ECF8 /* SampleViewController.m */; };
+		FA51881F1BB1730B0029ECF8 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA51881D1BB1730B0029ECF8 /* SampleViewController.xib */; };
+		FA5188231BB173C20029ECF8 /* HXContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5188221BB173C20029ECF8 /* HXContentView.m */; };
+		FA5188261BB187DA0029ECF8 /* UIColor+HXRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5188251BB187DA0029ECF8 /* UIColor+HXRandomColor.m */; };
 		FD375FA1BE4C9484ECFA18CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D262BFD0DAD70005F5716E3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,13 @@
 		FA51880C1BB16F660029ECF8 /* HXNoneReuseTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNoneReuseTableViewTests.m; sourceTree = "<group>"; };
 		FA5188171BB16FCD0029ECF8 /* HXNoneReuseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXNoneReuseTableView.h; path = HXNoneReuseTableView/HXNoneReuseTableView.h; sourceTree = "<group>"; };
 		FA5188181BB16FCD0029ECF8 /* HXNoneReuseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXNoneReuseTableView.m; path = HXNoneReuseTableView/HXNoneReuseTableView.m; sourceTree = "<group>"; };
+		FA51881B1BB1730B0029ECF8 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleViewController.h; path = HXNoneReuseTableView/Sample/SampleViewController.h; sourceTree = "<group>"; };
+		FA51881C1BB1730B0029ECF8 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleViewController.m; path = HXNoneReuseTableView/Sample/SampleViewController.m; sourceTree = "<group>"; };
+		FA51881D1BB1730B0029ECF8 /* SampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SampleViewController.xib; path = HXNoneReuseTableView/Sample/SampleViewController.xib; sourceTree = "<group>"; };
+		FA5188211BB173C20029ECF8 /* HXContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXContentView.h; path = HXNoneReuseTableView/Sample/Views/HXContentView.h; sourceTree = "<group>"; };
+		FA5188221BB173C20029ECF8 /* HXContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXContentView.m; path = HXNoneReuseTableView/Sample/Views/HXContentView.m; sourceTree = "<group>"; };
+		FA5188241BB187DA0029ECF8 /* UIColor+HXRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HXRandomColor.h"; path = "HXNoneReuseTableView/Sample/UIColor+HXRandomColor.h"; sourceTree = "<group>"; };
+		FA5188251BB187DA0029ECF8 /* UIColor+HXRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HXRandomColor.m"; path = "HXNoneReuseTableView/Sample/UIColor+HXRandomColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +119,7 @@
 		FA5187EF1BB16F660029ECF8 /* HXNoneReuseTableView */ = {
 			isa = PBXGroup;
 			children = (
+				FA51881A1BB172AE0029ECF8 /* Sample */,
 				FA5188161BB16F9D0029ECF8 /* HXNoneReuseTableView */,
 				FA5187F41BB16F660029ECF8 /* AppDelegate.h */,
 				FA5187F51BB16F660029ECF8 /* AppDelegate.m */,
@@ -154,6 +166,28 @@
 				FA5188181BB16FCD0029ECF8 /* HXNoneReuseTableView.m */,
 			);
 			name = HXNoneReuseTableView;
+			sourceTree = "<group>";
+		};
+		FA51881A1BB172AE0029ECF8 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				FA5188201BB173800029ECF8 /* Views */,
+				FA51881B1BB1730B0029ECF8 /* SampleViewController.h */,
+				FA51881C1BB1730B0029ECF8 /* SampleViewController.m */,
+				FA51881D1BB1730B0029ECF8 /* SampleViewController.xib */,
+				FA5188241BB187DA0029ECF8 /* UIColor+HXRandomColor.h */,
+				FA5188251BB187DA0029ECF8 /* UIColor+HXRandomColor.m */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		FA5188201BB173800029ECF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA5188211BB173C20029ECF8 /* HXContentView.h */,
+				FA5188221BB173C20029ECF8 /* HXContentView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +274,7 @@
 			files = (
 				FA5187FC1BB16F660029ECF8 /* Main.storyboard in Resources */,
 				FA5188011BB16F660029ECF8 /* LaunchScreen.xib in Resources */,
+				FA51881F1BB1730B0029ECF8 /* SampleViewController.xib in Resources */,
 				FA5187FE1BB16F660029ECF8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,8 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA51881E1BB1730B0029ECF8 /* SampleViewController.m in Sources */,
+				FA5188261BB187DA0029ECF8 /* UIColor+HXRandomColor.m in Sources */,
 				FA5188191BB16FCD0029ECF8 /* HXNoneReuseTableView.m in Sources */,
 				FA5187F91BB16F660029ECF8 /* ViewController.m in Sources */,
+				FA5188231BB173C20029ECF8 /* HXContentView.m in Sources */,
 				FA5187F61BB16F660029ECF8 /* AppDelegate.m in Sources */,
 				FA5187F31BB16F660029ECF8 /* main.m in Sources */,
 			);
