@@ -118,13 +118,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Debug
-
-- (void)dealloc{
-    NSLog(@"%s",__func__);
-}
-
-
 /*
 #pragma mark - Navigation
 

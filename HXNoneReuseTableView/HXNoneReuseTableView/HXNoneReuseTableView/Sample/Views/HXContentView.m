@@ -32,7 +32,7 @@
     self.backgroundColor = [UIColor randomColor];
     
     UILabel *titleLabel = [UILabel new];
-    titleLabel.font = [UIFont systemFontOfSize:10];
+    titleLabel.font = [UIFont systemFontOfSize:14];
     self.titleLabel = titleLabel;
     [self addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -59,12 +59,6 @@
 - (void)setTitle:(NSString *)title{
     _title = title;
     self.titleLabel.text = title;
-}
-
-#pragma mark - Debug
-
-- (void)dealloc{
-    NSLog(@"%s",__func__);
 }
 
 /*
