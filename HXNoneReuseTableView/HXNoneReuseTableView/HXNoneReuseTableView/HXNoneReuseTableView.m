@@ -175,13 +175,13 @@
 
 @implementation HXNoneReuseTableView (ResetHeight)
 
-- (BOOL)resetHeightOfSectionHeaderView:(UIView *)sectionHeaderView withHeight:(CGFloat)height animated:(BOOL)animated atScrollPosition:(UITableViewScrollPosition)scrollPosition{
+- (BOOL)resetHeightOfSectionHeaderView:(UIView *)sectionHeaderView withHeight:(CGFloat)height animated:(BOOL)animated{
     NSInteger index = [self.sectionHeaderViews indexOfObject:sectionHeaderView];
     if (index == NSNotFound) {
         //NSLog(@"sectionHeaderView未找到");
         return NO;
     }
-    return [self resetSectionHeaderHeight:height atSection:index animated:animated atScrollPosition:scrollPosition];
+    return [self resetSectionHeaderHeight:height atSection:index animated:animated];
 }
 
 - (BOOL)resetHeightOfCellView:(UIView *)cellView withHeight:(CGFloat)height animated:(BOOL)animated atScrollPosition:(UITableViewScrollPosition)scrollPosition{
@@ -193,7 +193,7 @@
     return [self resetCellHeight:height atSection:index animated:animated atScrollPosition:scrollPosition];
 }
 
-- (BOOL)resetSectionHeaderHeight:(CGFloat)height atSection:(NSInteger)section animated:(BOOL)animated atScrollPosition:(UITableViewScrollPosition)scrollPosition{
+- (BOOL)resetSectionHeaderHeight:(CGFloat)height atSection:(NSInteger)section animated:(BOOL)animated{
     
     if (section < 0 || section > self.sectionHeightConstraints.count) {
         return NO;

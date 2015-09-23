@@ -86,7 +86,7 @@
                     /**
                      *  WARNING:循环引用注意
                      */
-                    [strongTableView resetHeightOfSectionHeaderView:view withHeight:height animated:shouldanimated atScrollPosition:scrolltype];
+                    [strongTableView resetHeightOfSectionHeaderView:view withHeight:height animated:shouldanimated];
                 }];
                 
                 [cellView setClickBlock:^(HXContentView *view) {
