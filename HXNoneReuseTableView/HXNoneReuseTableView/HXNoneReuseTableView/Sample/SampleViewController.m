@@ -32,7 +32,7 @@
     
     [self.view addSubview:tableView];
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(16, 16, 16, 16));
+        make.edges.equalTo(self.view);//.insets(UIEdgeInsetsMake(16, 16, 16, 16));
     }];
 
     NSArray *shouldFloatingTypes = @[ @YES ,@NO];

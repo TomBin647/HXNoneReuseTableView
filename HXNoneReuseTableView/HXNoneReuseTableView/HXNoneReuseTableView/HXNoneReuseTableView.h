@@ -14,6 +14,10 @@
 
 @interface HXNoneReuseTableView : UIView
 
+@property (nonatomic, assign) CGFloat sectionHeight;//默认section头高度
+
+@property (nonatomic, assign) CGFloat cellHeight;//默认cell高度
+
 @property (nonatomic, readonly) UIScrollView *scrollView;
 
 /**
@@ -31,6 +35,27 @@
                     cellView:(UIView *)cellView
                   cellHeight:(CGFloat)cellHeight;
 
+@end
+
+@interface HXNoneReuseTableView (ConvenientAddView)
+
+/**
+ * 向视图中添加单元头
+ * 由于单元头具有可以浮动的属性,因此添加单元头但不浮动的行为与添加cell没有区别,因此不提供shouldSectionHeaderFloating参数,使用此方法添加的sectionHeader一律可以浮动
+ *
+ *  @param sectionHeaderView 单元头视图
+ *  @param sectionHeight     单元头高度
+ */
+- (void)addSectionHeaderView:(UIView *)sectionHeaderView
+               sectionHeight:(CGFloat)sectionHeight;
+
+/**
+ *  向视图中添加单元头
+ *
+ *  @param sectionHeaderView 单元头视图,高度将使用默认高度,默认高度在sectionHeight修改
+ */
+- (void)addSectionHeaderView:(UIView *)sectionHeaderView;
+
 /**
  *  向视图中添加不含单元头的单元格
  *
@@ -39,6 +64,13 @@
  */
 - (void)addCellView:(UIView *)cellView
          cellHeight:(CGFloat)cellHeight;
+
+/**
+ *  向视图中添加不含单元头的单元格
+ *
+ *  @param cellView 单元格视图,高度将使用默认高度,默认高度在cellHeight修改
+ */
+- (void)addCellView:(UIView *)cellView;
 
 @end
 

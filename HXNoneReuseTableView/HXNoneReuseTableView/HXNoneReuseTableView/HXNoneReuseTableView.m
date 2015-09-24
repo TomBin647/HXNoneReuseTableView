@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) MASConstraint *scrollViewBottomConstraint;
 
+@property (nonatomic, assign) BOOL animating;
+
 @end
 
 @implementation HXNoneReuseTableView
@@ -29,6 +31,8 @@
 {
     self = [super init];
     if (self) {
+        self.sectionHeight = 44;
+        self.cellHeight = 44;
         [self setupView];
     }
     return self;
@@ -52,7 +56,7 @@
         make.edges.width.equalTo(contentView.superview);
         make.height.equalTo(contentView.superview).priority(1);
     }];
-
+    
 }
 
 #pragma mark - Public Method
@@ -66,7 +70,7 @@
     UIView *contentView = self.contentView;
     
     UIView *lastCellView = [self.cellViews lastObject];
-
+    
     sectionHeight = sectionHeight<0?0:sectionHeight;
     cellHeight = cellHeight<0?0:cellHeight;
     
@@ -102,7 +106,7 @@
         make.top.equalTo(sectionHeightLayoutGuide.mas_bottom);
         [self resetScrollViewBottom:make];
     }];
-
+    
     //sectionHeader视图
     [contentView addSubview:sectionHeaderView];
     [sectionHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -169,6 +173,34 @@
 
 - (void)dealloc{
     NSLog(@"%s",__func__);
+}
+
+@end
+
+@implementation HXNoneReuseTableView (ConvenientAddView)
+
+- (void)addSectionHeaderView:(UIView *)sectionHeaderView
+               sectionHeight:(CGFloat)sectionHeight{
+    if (!sectionHeaderView) {
+        return;
+    }
+    [self addSectionHeaderView:sectionHeaderView sectionHeight:sectionHeight shouldSectionHeaderFloating:YES cellView:nil cellHeight:0];
+}
+
+- (void)addSectionHeaderView:(UIView *)sectionHeaderView{
+    [self addSectionHeaderView:sectionHeaderView sectionHeight:self.sectionHeight];
+}
+
+- (void)addCellView:(UIView *)cellView
+         cellHeight:(CGFloat)cellHeight{
+    if (!cellView) {
+        return;
+    }
+    [self addSectionHeaderView:nil sectionHeight:0 shouldSectionHeaderFloating:NO cellView:cellView cellHeight:cellHeight];
+}
+
+- (void)addCellView:(UIView *)cellView{
+    [self addCellView:cellView cellHeight:self.cellHeight];
 }
 
 @end
